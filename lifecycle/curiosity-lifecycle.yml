@@ -1,0 +1,15 @@
+generated: '2026-10-12'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://docs.curiosity.ai/workspace-learning/07-apis-endpoints/07-deployment-and-versioning
+sources:
+- https://docs.curiosity.ai/workspace-learning/07-apis-endpoints/07-deployment-and-versioning
+- https://docs.curiosity.ai/changelog/
+- https://docs.curiosity.ai/changelog/
+- https://docs.curiosity.ai/workspace/getting-started/build-your-first-enterprise-ai-app
+versioning:
+  docs: 'Breaking changes → new endpoint with a version suffix: similar‑tickets‑v2 ← new version, deploy alongside'
+deprecation:
+  policy: Retire the old endpoint when all callers have switched to the new version.
+status_page: null
+docs: https://docs.curiosity.ai/workspace-learning/07-apis-endpoints/07-deployment-and-versioning

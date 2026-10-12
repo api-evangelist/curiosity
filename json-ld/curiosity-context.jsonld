@@ -1,0 +1,109 @@
+{
+  "@context": {
+    "@vocab": "https://curiosity.ai/schema#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "curiosity": "https://curiosity.ai/schema#",
+    "PostApiAdminAgentSessionsIdUploadsRequest": "curiosity:PostApiAdminAgentSessionsIdUploadsRequest",
+    "file": {
+      "@id": "curiosity:file",
+      "@type": "xsd:string"
+    },
+    "PostApiAdminAgentSessionsIdUploadsResponse": "curiosity:PostApiAdminAgentSessionsIdUploadsResponse",
+    "UID": {
+      "@id": "curiosity:UID",
+      "@type": "xsd:string"
+    },
+    "Size": {
+      "@id": "curiosity:Size",
+      "@type": "xsd:integer"
+    },
+    "ContentType": {
+      "@id": "curiosity:ContentType",
+      "@type": "xsd:string"
+    },
+    "GetApiEmbeddingsEmbeddingidResponse": "curiosity:GetApiEmbeddingsEmbeddingidResponse",
+    "nodeType": {
+      "@id": "curiosity:nodeType"
+    },
+    "PostApiEmbeddingsEmbeddingidRequest": "curiosity:PostApiEmbeddingsEmbeddingidRequest",
+    "Dimensions": {
+      "@id": "curiosity:Dimensions",
+      "@type": "xsd:integer"
+    },
+    "MaximumNumberOfPoints": {
+      "@id": "curiosity:MaximumNumberOfPoints",
+      "@type": "xsd:integer"
+    },
+    "NumberOfEpochsOverride": {
+      "@id": "curiosity:NumberOfEpochsOverride",
+      "@type": "xsd:integer"
+    },
+    "PostApiEmbeddingsEmbeddingidResponse": "curiosity:PostApiEmbeddingsEmbeddingidResponse",
+    "ProjectedPoints": {
+      "@id": "curiosity:ProjectedPoints",
+      "@type": "xsd:string"
+    },
+    "GetApiLoginCheckResponse": "curiosity:GetApiLoginCheckResponse",
+    "user": {
+      "@id": "curiosity:user"
+    },
+    "PostApiLoginPasswordPasswordidRequest": "curiosity:PostApiLoginPasswordPasswordidRequest",
+    "oldPassword": {
+      "@id": "curiosity:oldPassword",
+      "@type": "xsd:string"
+    },
+    "newPassword": {
+      "@id": "curiosity:newPassword",
+      "@type": "xsd:string"
+    },
+    "PutApiSearchSettingsLlmRequest": "curiosity:PutApiSearchSettingsLlmRequest",
+    "nodeTypes": {
+      "@id": "curiosity:nodeTypes",
+      "@container": "@list"
+    },
+    "filters": {
+      "@id": "curiosity:filters",
+      "@container": "@list"
+    },
+    "PutApiSearchSynonymsForRequest": "curiosity:PutApiSearchSynonymsForRequest",
+    "Synonyms": {
+      "@id": "curiosity:Synonyms",
+      "@container": "@list"
+    },
+    "Alternates": {
+      "@id": "curiosity:Alternates",
+      "@container": "@list"
+    },
+    "Blocked": {
+      "@id": "curiosity:Blocked",
+      "@container": "@list"
+    },
+    "PostChatCompletionsRequest": "curiosity:PostChatCompletionsRequest",
+    "model": {
+      "@id": "curiosity:model",
+      "@type": "xsd:string"
+    },
+    "messages": {
+      "@id": "curiosity:messages",
+      "@container": "@list"
+    },
+    "stream": {
+      "@id": "curiosity:stream",
+      "@type": "xsd:boolean"
+    },
+    "PostV1MessagesRequest": "curiosity:PostV1MessagesRequest",
+    "max_tokens": {
+      "@id": "curiosity:max_tokens",
+      "@type": "xsd:integer"
+    }
+  },
+  "@type": "schema:Dataset",
+  "schema:name": "Curiosity API JSON-LD context",
+  "schema:description": "A JSON-LD @context for the objects Curiosity's own API contract declares: one class per component schema, one property per declared field, typed from the contract. Derived by script (derive-json-ld.py, 2026-10-12) from openapi/_ae-authored/curiosity-openapi-generated.yml.",
+  "dcterms:created": "2026-10-12",
+  "dcterms:source": [
+    "openapi/_ae-authored/curiosity-openapi-generated.yml"
+  ]
+}

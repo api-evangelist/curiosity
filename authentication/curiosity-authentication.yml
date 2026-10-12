@@ -1,0 +1,17 @@
+generated: '2026-10-12'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://docs.curiosity.ai/workspace-learning/07-apis-endpoints/02-authentication
+sources:
+- https://docs.curiosity.ai/workspace-learning/07-apis-endpoints/02-authentication
+- https://docs.curiosity.ai/workspace/getting-started/build-your-first-enterprise-ai-app
+description: Curiosity uses bearer tokens passed in the Authorization header.
+schemes:
+- type: http-bearer
+  name: API token / Endpoint token / Session JWT
+  evidence: 'Authorization: Bearer <endpoint-token>'
+  location: header
+  header: Authorization
+  how_to_obtain: Created via Admin → API Tokens (API token, Endpoint token) or via login flow for Session JWT.
+note: No OAuth2, apiKey, http-basic, jwt, hmac, mtls, or other schemes are documented on the referenced pages.
+docs: https://docs.curiosity.ai/workspace-learning/07-apis-endpoints/02-authentication

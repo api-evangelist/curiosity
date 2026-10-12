@@ -1,0 +1,18 @@
+generated: '2026-10-12'
+method: searched
+source: https://curiosity.ai/privacy-policy/
+signals:
+  data_subject_request:
+    - source: https://curiosity.ai/privacy-policy/
+      http_status: 200
+      fetched: true
+      quote: "Under the GDPR, you have the right to: Access your personal data, Rectify inaccurate data, Request deletion, Restrict processing, Data portability, Object to processing based on legitimate interests, Withdraw consent at any time."
+      section: your-rights
+      note: Lists the data subject rights provided to users.
+  subprocessors:
+    - source: https://curiosity.ai/resources/trust-center/subprocessors/
+      http_status: 200
+      fetched: true
+      quote: "The authoritative subprocessor register is a document, provided on request, and changes are notified in advance. Treat this page as an orientation to it, not as the register itself."
+      section: null
+      note: Indicates a subprocessor register is available on request.

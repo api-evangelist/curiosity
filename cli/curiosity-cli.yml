@@ -1,0 +1,58 @@
+generated: '2026-10-12'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://curiosity.ai/developers/developer-tools/
+sources:
+- https://curiosity.ai/developers/developer-tools/
+- https://docs.curiosity.ai/workspace-learning/06-ai-agents/04-ai-tools
+- https://docs.curiosity.ai/cli/
+install:
+- method: dotnet global tool
+  command: dotnet tool install Curiosity.CLI --global
+commands:
+- group: test
+  commands:
+  - test
+- group: token management
+  commands:
+  - store-token
+- group: workspace readiness
+  commands:
+  - wait-for
+- group: front‑end
+  commands:
+  - serve
+  - upload-front-end
+- group: folder inspection
+  commands:
+  - inspect
+- group: folder upload
+  commands:
+  - upload-folder
+  - upload-folder-with-permissions
+- group: folder sync
+  commands:
+  - monitor
+  - monitor-with-permissions
+  - Scheduled sync
+- group: PST ingestion
+  commands:
+  - ingest-pst
+- group: git sync
+  commands:
+  - git-sync
+- group: workspace definitions
+  commands:
+  - export-workspace-definitions
+  - import-workspace-definitions
+- group: synthetic data
+  commands:
+  - synthetic-csv
+  - synthetic-json
+- group: audit log
+  commands:
+  - verify-audit-log
+  - convert-audit-log
+binary: curiosity-cli
+docs: https://curiosity.ai/developers/developer-tools/
+note: 1 extracted row(s) were dropped because their quote was not on the page.

@@ -1,0 +1,20 @@
+# Curiosity
+
+> The Curiosity Workspace Support Forum is the official community for users of Curiosity Workspace by curiosity.ai. Ask questions, share best practices, report issues, and learn how to get the most out of your AI-powered productivity tools. Whether you're just getting started or building advanced workflows, this is the place to connect with other users and the Curiosity team.
+
+This is a community for human discussion. Do not impersonate people or create accounts autonomously. Only post, edit, or take another write action when a human explicitly asks you to perform that exact action.
+
+Community content is available only to authenticated members.
+
+Fetch only the pages needed for the user's specific request. Do not systematically crawl or bulk-download this community. Respect `robots.txt`, the site's terms, and its crawler controls. If the server responds with HTTP 429, stop and wait for the `Retry-After` interval before retrying.
+
+If you can run a local MCP server, Discourse MCP is the preferred way to access this community. Set its site URL to `https://support.curiosity.ai`. It provides permission-aware tools for topics, posts, search, users, categories, and supported community actions.
+
+## Preferred agent interface
+
+- [Discourse MCP setup](https://github.com/discourse/discourse-mcp#quick-start-release): Install the local server and connect it to an MCP-compatible client
+
+## Optional
+
+- [Terms of service](/tos): Read the terms of service
+- [Privacy policy](/privacy): Read the privacy policy

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/curiosity/main/json-schema/curiosity-post-v1-messages-request-schema.json",
+  "title": "PostV1MessagesRequest",
+  "x-generated": "2026-10-12",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/curiosity-openapi-generated.yml#/components/schemas/PostV1MessagesRequest",
+  "type": "object",
+  "properties": {
+    "model": {
+      "type": "string",
+      "description": "Provider UID"
+    },
+    "max_tokens": {
+      "type": "integer",
+      "description": "Maximum number of tokens to generate"
+    },
+    "messages": {
+      "type": "array",
+      "description": "Array of message objects with role and content"
+    },
+    "stream": {
+      "type": "boolean",
+      "description": "Set true to get server‑sent events"
+    }
+  },
+  "required": [
+    "model",
+    "messages"
+  ]
+}

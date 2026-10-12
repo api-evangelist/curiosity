@@ -1,0 +1,13 @@
+generated: '2026-10-12'
+method: searched
+probe: true
+source: https://security.curiosity.ai/
+url: https://security.curiosity.ai/
+certifications:
+- SOC 2
+- ISO 27001
+evidence:
+- source: https://security.curiosity.ai/
+  keywords:
+  - soc2
+  - iso 27001

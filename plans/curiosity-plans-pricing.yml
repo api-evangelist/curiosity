@@ -1,0 +1,26 @@
+generated: '2026-10-12'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://curiosity.ai/pricing/
+sources:
+- https://curiosity.ai/pricing/
+name: Curiosity pricing
+audience: developer-api
+pricing_basis: free
+plans:
+- name: Developer
+  price_text: Free
+  description: Up to 10 test users, free evaluation license, no time limit for development use.
+- name: Enterprise Studio
+  price_text: Custom
+  description: Starting from 50 users, private cloud or on‑premises hosting, custom data and workflows, enterprise SLA and priority support.
+  features:
+  - Custom hosting options
+  - On premises hosting
+  - Custom data and workflows
+  - APIs
+  - Support
+  limits:
+  - name: Minimum users
+    limit_text: 50 users
+docs: https://curiosity.ai/pricing/

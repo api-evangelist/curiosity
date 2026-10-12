@@ -1,0 +1,65 @@
+generated: '2026-10-12'
+method: derived
+generator: derive-vocabulary.py
+source: openapi/_ae-authored/curiosity-openapi-generated.yml
+vocabulary:
+  name: Curiosity Domain Vocabulary
+  description: 'Terms declared by Curiosity''s own API contract: its resource groups, objects and enumerations, with the contract''s definitions.
+    Derived, not authored.'
+  version: '2026-10-12'
+  terms:
+  - term: PostApiAdminAgentSessionsIdUploadsRequest
+    definition: 'Object declared by the contract with fields: file.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/curiosity-openapi-generated.yml#/components/schemas/PostApiAdminAgentSessionsIdUploadsRequest
+  - term: PostApiAdminAgentSessionsIdUploadsResponse
+    definition: 'Object declared by the contract with fields: UID, Size, ContentType.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/curiosity-openapi-generated.yml#/components/schemas/PostApiAdminAgentSessionsIdUploadsResponse
+  - term: GetApiEmbeddingsEmbeddingidResponse
+    definition: 'Object declared by the contract with fields: nodeType.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/curiosity-openapi-generated.yml#/components/schemas/GetApiEmbeddingsEmbeddingidResponse
+  - term: PostApiEmbeddingsEmbeddingidRequest
+    definition: 'Object declared by the contract with fields: Dimensions, MaximumNumberOfPoints, NumberOfEpochsOverride.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/curiosity-openapi-generated.yml#/components/schemas/PostApiEmbeddingsEmbeddingidRequest
+  - term: PostApiEmbeddingsEmbeddingidResponse
+    definition: 'Object declared by the contract with fields: ProjectedPoints.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/curiosity-openapi-generated.yml#/components/schemas/PostApiEmbeddingsEmbeddingidResponse
+  - term: GetApiLoginCheckResponse
+    definition: 'Object declared by the contract with fields: user.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/curiosity-openapi-generated.yml#/components/schemas/GetApiLoginCheckResponse
+  - term: PostApiLoginPasswordPasswordidRequest
+    definition: 'Object declared by the contract with fields: oldPassword, newPassword.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/curiosity-openapi-generated.yml#/components/schemas/PostApiLoginPasswordPasswordidRequest
+  - term: PutApiSearchSettingsLlmRequest
+    definition: 'Object declared by the contract with fields: nodeTypes, filters.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/curiosity-openapi-generated.yml#/components/schemas/PutApiSearchSettingsLlmRequest
+  - term: PutApiSearchSynonymsForRequest
+    definition: 'Object declared by the contract with fields: Synonyms, Alternates, Blocked.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/curiosity-openapi-generated.yml#/components/schemas/PutApiSearchSynonymsForRequest
+  - term: PostChatCompletionsRequest
+    definition: 'Object declared by the contract with fields: model, messages, stream.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/curiosity-openapi-generated.yml#/components/schemas/PostChatCompletionsRequest
+  - term: PostV1MessagesRequest
+    definition: 'Object declared by the contract with fields: model, max_tokens, messages, stream.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/curiosity-openapi-generated.yml#/components/schemas/PostV1MessagesRequest

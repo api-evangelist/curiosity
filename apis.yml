@@ -1,23 +1,139 @@
 aid: curiosity
+
 name: Curiosity
-description: 'Curiosity is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://curiosity.ai/assets/social/home.png
+
+description: Curiosity provides an AI‑powered enterprise knowledge graph platform that lets organizations connect, enrich, and query their data
+  across systems. Built for on‑premises or private‑cloud deployment, Curiosity Studio enables users to build custom AI‑driven tools, search, embeddings,
+  and agents while keeping data within their own infrastructure. The platform supports a REST API, SDKs for C# and Python, and extensive developer
+  documentation covering data ingestion, security, and extensibility.
+
 url: https://raw.githubusercontent.com/api-evangelist/curiosity/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-12 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-12'
+
 modified: '2026-10-12'
+
 tags:
+- AI
+- Knowledge-Graph
+- Enterprise
+- Data-Integration
+- On-Premises
 - Company
-apis: []
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Plans
+  url: plans/curiosity-plans-pricing.yml
+- type: Spectral
+  url: rules/curiosity-rules.yml
+- type: JSONLD
+  url: json-ld/curiosity-context.jsonld
+- type: Vocabulary
+  url: vocabulary/curiosity-vocabulary.yml
+- type: DataModel
+  url: data-model/curiosity-data-model.yml
+- type: CLI
+  url: cli/curiosity-cli.yml
+- type: Compliance
+  url: https://security.curiosity.ai/
+- type: Authentication
+  url: authentication/curiosity-authentication.yml
+- type: Deprecation
+  url: lifecycle/curiosity-lifecycle.yml
+- type: Lifecycle
+  url: lifecycle/curiosity-lifecycle.yml
+- type: Conformance
+  url: conformance/curiosity-conformance.yml
+- type: LLMsTxt
+  url: llms/curiosity-llms.txt
+- type: Hosts
+  url: hosts/curiosity-hosts.yml
+- type: Vendors
+  url: vendors/curiosity-vendors.yml
+- type: SDKs
+  url: packages/curiosity-packages.yml
+- type: Packages
+  url: packages/curiosity-packages.yml
+- type: ChangeLog
+  url: https://docs.curiosity.ai/changelog/
+- type: GettingStarted
+  url: https://docs.curiosity.ai/workspace/getting-started/build-your-first-enterprise-ai-app
+- type: TrustCenter
+  url: security/curiosity-trust-center.yml
+- type: DomainSecurity
+  url: security/curiosity-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://curiosity.ai
+- type: Documentation
+  url: https://docs.curiosity.ai/
+- type: DeveloperPortal
+  url: https://curiosity.ai/developers/
+- type: Blog
+  url: https://blog.curiosity.ai/
+- type: Pricing
+  url: https://curiosity.ai/pricing/
+- type: Support
+  url: https://support.curiosity.ai/
+
+apis:
+- name: Curiosity Workspace API
+  description: Workspace API provides programmatic access to Curiosity's enterprise knowledge graph, enabling data ingestion, search, embeddings,
+    and AI agent operations.
+  humanURL: https://docs.curiosity.ai/workspace-api/
+  baseURL: null
+  aid: curiosity:curiosity-workspace-api
+- aid: curiosity:curiosity-api
+  name: Curiosity API
+  description: 'Curiosity API as documented publicly: 47 operations. Contract generated from the documentation by API Evangelist (2026-10-12);
+
+    not the provider''s own document.'
+  humanURL: https://docs.curiosity.ai/workspace-learning/07-apis-endpoints/02-authentication
+  baseURL: https://<your-workspace-host>/api
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/curiosity-openapi-generated.yml
+    x-provenance: generated
+  - type: JSONSchema
+    url: json-schema/curiosity-post-v1-messages-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-post-chat-completions-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-put-api-search-synonyms-for-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-post-api-embeddings-embeddingid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-put-api-search-settings-llm-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-post-api-login-password-passwordid-request-schema.json
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: No OpenAPI, AsyncAPI, GraphQL, gRPC, or WSDL contract was found on the documented API host despite accessible documentation.
+  evidence:
+  - url: https://docs.curiosity.ai/workspace-api/
+    status: 200
+  checked: '2026-10-12'
+x-enrichment:
+  date: '2026-10-12'
+  status: enriched
+  artifacts_added: 26
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
