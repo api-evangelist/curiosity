@@ -1,0 +1,103 @@
+openapi: 3.2.0
+info:
+  title: Curiosity Admin Agent API
+  version: '2026-10-12'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-12: 47 operation(s) read from 10 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Curiosity has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 1
+    documentation: 46
+    pages-with-code: 4
+    pages-read: 10
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-12'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://docs.curiosity.ai/workspace-learning/07-apis-endpoints/02-authentication
+  - https://docs.curiosity.ai/workspace-learning/07-apis-endpoints/03-custom-endpoints
+  - https://curiosity.ai/developers
+  - https://docs.curiosity.ai/workspace-build/apis-and-customization/extensibility-and-apis/api-overview
+  - https://docs.curiosity.ai/workspace/getting-started/build-your-first-enterprise-ai-app
+  - https://docs.curiosity.ai/workspace-api/token-scopes
+  - https://docs.curiosity.ai/workspace-api/llm-router
+  - https://docs.curiosity.ai/workspace-api/rest-api
+  - https://docs.curiosity.ai/workspace-api/graph-query-language
+  - https://docs.curiosity.ai/workspace-api/embeddings-api
+servers:
+- url: https://<your-workspace-host>/api
+security:
+- bearer: []
+tags:
+- name: Admin Agent
+paths:
+  /api/admin-agent/sessions/{id}/commit/approve:
+    post:
+      operationId: post_api_admin_agent_sessions_id_commit_approve
+      tags:
+      - Admin Agent
+      summary: Approve a session commit; streams log and result events
+      x-source: https://docs.curiosity.ai/workspace-api/rest-api
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /api/admin-agent/sessions/{id}/uploads:
+    post:
+      operationId: post_api_admin_agent_sessions_id_uploads
+      tags:
+      - Admin Agent
+      summary: Attach a file to an admin‑assistant conversation
+      x-source: https://docs.curiosity.ai/workspace-api/rest-api
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostApiAdminAgentSessionsIdUploadsRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiAdminAgentSessionsIdUploadsResponse'
+      x-evidence:
+        kind: documentation
+components:
+  schemas:
+    PostApiAdminAgentSessionsIdUploadsResponse:
+      type: object
+      properties:
+        UID:
+          type: string
+        Size:
+          type: integer
+        ContentType:
+          type: string
+    PostApiAdminAgentSessionsIdUploadsRequest:
+      type: object
+      properties:
+        file:
+          type: string
+          description: One file to upload.
+      required:
+      - file
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer

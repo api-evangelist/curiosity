@@ -1,0 +1,116 @@
+openapi: 3.2.0
+info:
+  title: Curiosity Embeddings API
+  version: '2026-10-12'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-12: 47 operation(s) read from 10 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Curiosity has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 1
+    documentation: 46
+    pages-with-code: 4
+    pages-read: 10
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-12'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://docs.curiosity.ai/workspace-learning/07-apis-endpoints/02-authentication
+  - https://docs.curiosity.ai/workspace-learning/07-apis-endpoints/03-custom-endpoints
+  - https://curiosity.ai/developers
+  - https://docs.curiosity.ai/workspace-build/apis-and-customization/extensibility-and-apis/api-overview
+  - https://docs.curiosity.ai/workspace/getting-started/build-your-first-enterprise-ai-app
+  - https://docs.curiosity.ai/workspace-api/token-scopes
+  - https://docs.curiosity.ai/workspace-api/llm-router
+  - https://docs.curiosity.ai/workspace-api/rest-api
+  - https://docs.curiosity.ai/workspace-api/graph-query-language
+  - https://docs.curiosity.ai/workspace-api/embeddings-api
+servers:
+- url: https://<your-workspace-host>/api
+security:
+- bearer: []
+tags:
+- name: Embeddings
+paths:
+  /api/embeddings/{embeddingid}:
+    get:
+      operationId: get_api_embeddings_embeddingid
+      tags:
+      - Embeddings
+      summary: 'Reference for the embeddings surface in Curiosity Studio: how to encode text…'
+      description: List every node type that has at least one embedding index. Returns JSON mapping node types to indexUID arrays.
+      x-source: https://docs.curiosity.ai/workspace-api/embeddings-api
+      parameters:
+      - name: embeddingid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetApiEmbeddingsEmbeddingidResponse'
+      x-evidence:
+        kind: documentation
+        collapsed_from: 2 example path(s) differing only at embeddingId
+    post:
+      operationId: post_api_embeddings_embeddingid
+      tags:
+      - Embeddings
+      summary: 'Reference for the embeddings surface in Curiosity Studio: how to encode text…'
+      description: Run UMAP over the embeddings for visualization. Returns MessagePack containing the projected points.
+      x-source: https://docs.curiosity.ai/workspace-api/embeddings-api
+      parameters:
+      - name: embeddingid
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostApiEmbeddingsEmbeddingidRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiEmbeddingsEmbeddingidResponse'
+      x-evidence:
+        kind: documentation
+        collapsed_from: 3 example path(s) differing only at embeddingId
+components:
+  schemas:
+    GetApiEmbeddingsEmbeddingidResponse:
+      type: object
+      properties:
+        nodeType:
+          type: object
+          description: Maps to an array of indexUID strings.
+    PostApiEmbeddingsEmbeddingidRequest:
+      type: object
+      properties:
+        Dimensions:
+          type: integer
+        MaximumNumberOfPoints:
+          type: integer
+        NumberOfEpochsOverride:
+          type: integer
+      required:
+      - Dimensions
+      - MaximumNumberOfPoints
+    PostApiEmbeddingsEmbeddingidResponse:
+      type: object
+      properties:
+        ProjectedPoints:
+          type: string
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer

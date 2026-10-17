@@ -1,0 +1,72 @@
+openapi: 3.2.0
+info:
+  title: Curiosity Code API
+  version: '2026-10-12'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-12: 47 operation(s) read from 10 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Curiosity has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 1
+    documentation: 46
+    pages-with-code: 4
+    pages-read: 10
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-12'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://docs.curiosity.ai/workspace-learning/07-apis-endpoints/02-authentication
+  - https://docs.curiosity.ai/workspace-learning/07-apis-endpoints/03-custom-endpoints
+  - https://curiosity.ai/developers
+  - https://docs.curiosity.ai/workspace-build/apis-and-customization/extensibility-and-apis/api-overview
+  - https://docs.curiosity.ai/workspace/getting-started/build-your-first-enterprise-ai-app
+  - https://docs.curiosity.ai/workspace-api/token-scopes
+  - https://docs.curiosity.ai/workspace-api/llm-router
+  - https://docs.curiosity.ai/workspace-api/rest-api
+  - https://docs.curiosity.ai/workspace-api/graph-query-language
+  - https://docs.curiosity.ai/workspace-api/embeddings-api
+servers:
+- url: https://<your-workspace-host>/api
+security:
+- bearer: []
+tags:
+- name: Code
+paths:
+  /api/code/history/all:
+    get:
+      operationId: get_api_code_history_all
+      tags:
+      - Code
+      summary: The workspace change‑history timeline, newest first, backing Manage → Operate →…
+      x-source: https://docs.curiosity.ai/workspace-api/rest-api
+      parameters:
+      - name: from
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: to
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: skip
+        in: query
+        required: false
+        schema:
+          type: integer
+      - name: take
+        in: query
+        required: false
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+components:
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer

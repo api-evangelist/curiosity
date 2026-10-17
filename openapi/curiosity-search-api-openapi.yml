@@ -1,0 +1,198 @@
+openapi: 3.2.0
+info:
+  title: Curiosity Search API
+  version: '2026-10-12'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-12: 47 operation(s) read from 10 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Curiosity has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 1
+    documentation: 46
+    pages-with-code: 4
+    pages-read: 10
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-12'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://docs.curiosity.ai/workspace-learning/07-apis-endpoints/02-authentication
+  - https://docs.curiosity.ai/workspace-learning/07-apis-endpoints/03-custom-endpoints
+  - https://curiosity.ai/developers
+  - https://docs.curiosity.ai/workspace-build/apis-and-customization/extensibility-and-apis/api-overview
+  - https://docs.curiosity.ai/workspace/getting-started/build-your-first-enterprise-ai-app
+  - https://docs.curiosity.ai/workspace-api/token-scopes
+  - https://docs.curiosity.ai/workspace-api/llm-router
+  - https://docs.curiosity.ai/workspace-api/rest-api
+  - https://docs.curiosity.ai/workspace-api/graph-query-language
+  - https://docs.curiosity.ai/workspace-api/embeddings-api
+servers:
+- url: https://<your-workspace-host>/api
+security:
+- bearer: []
+tags:
+- name: Search
+paths:
+  /api/search/settings/llm:
+    get:
+      operationId: get_api_search_settings_llm
+      tags:
+      - Search
+      summary: Which node types and search filters the built-in search tool exposes to an…
+      x-source: https://docs.curiosity.ai/workspace-api/rest-api
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+    put:
+      operationId: put_api_search_settings_llm
+      tags:
+      - Search
+      summary: Store the exposed node types and filters.
+      x-source: https://docs.curiosity.ai/workspace-api/rest-api
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PutApiSearchSettingsLlmRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /api/search/synonyms/for:
+    get:
+      operationId: get_api_search_synonyms_for
+      tags:
+      - Search
+      summary: The synonyms, alternates, blocked terms and suggested candidates for one term
+      x-source: https://docs.curiosity.ai/workspace-api/rest-api
+      parameters:
+      - name: token
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Authentication token (if required).
+      - name: lang
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Language code.
+      - name: tolerance
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Similarity tolerance (0.7–1.0).
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+    put:
+      operationId: put_api_search_synonyms_for
+      tags:
+      - Search
+      summary: Store the Synonyms, Alternates and Blocked lists for one term — all three are…
+      x-source: https://docs.curiosity.ai/workspace-api/rest-api
+      parameters:
+      - name: token
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Authentication token (if required).
+      - name: lang
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Language code.
+      - name: ignoreCase
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Whether to ignore case.
+      - name: replace
+        in: query
+        required: false
+        schema:
+          type: string
+        description: If false, merges with existing configuration.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PutApiSearchSynonymsForRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /api/search/synonyms/list/for:
+    get:
+      operationId: get_api_search_synonyms_list_for
+      tags:
+      - Search
+      summary: Every term that has synonyms configured for a language
+      x-source: https://docs.curiosity.ai/workspace-api/rest-api
+      parameters:
+      - name: lang
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Language code.
+      - name: query
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Search term.
+      - name: includeSynonyms
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Set to 1 to include synonym pairs.
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+components:
+  schemas:
+    PutApiSearchSettingsLlmRequest:
+      type: object
+      properties:
+        nodeTypes:
+          type: array
+          description: Node types to expose.
+        filters:
+          type: array
+          description: Search filters to expose.
+    PutApiSearchSynonymsForRequest:
+      type: object
+      properties:
+        Synonyms:
+          type: array
+          description: List of synonym strings.
+        Alternates:
+          type: array
+          description: List of alternate strings.
+        Blocked:
+          type: array
+          description: List of blocked terms.
+      required:
+      - Synonyms
+      - Alternates
+      - Blocked
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer

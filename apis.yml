@@ -94,22 +94,22 @@ common:
 
 apis:
 - name: Curiosity Workspace API
-  description: Workspace API provides programmatic access to Curiosity's enterprise knowledge graph, enabling data ingestion, search, embeddings,
-    and AI agent operations.
+  description: >-
+    Workspace API provides programmatic access to Curiosity's enterprise knowledge graph, enabling data
+    ingestion, search, embeddings, and AI agent operations.
   humanURL: https://docs.curiosity.ai/workspace-api/
   baseURL: null
   aid: curiosity:curiosity-workspace-api
-- aid: curiosity:curiosity-api
-  name: Curiosity API
-  description: 'Curiosity API as documented publicly: 47 operations. Contract generated from the documentation by API Evangelist (2026-10-12);
-
-    not the provider''s own document.'
-  humanURL: https://docs.curiosity.ai/workspace-learning/07-apis-endpoints/02-authentication
+- aid: curiosity:curiosity-admin-agent-api
+  name: Curiosity Admin Agent API
+  description: The Admin Agent API from Curiosity — 2 operation(s) for admin agent.
+  humanURL: https://docs.curiosity.ai/workspace-api/
   baseURL: https://<your-workspace-host>/api
+  tags:
+  - Admin Agent
   properties:
   - type: OpenAPI
-    url: openapi/_ae-authored/curiosity-openapi-generated.yml
-    x-provenance: generated
+    url: openapi/curiosity-admin-agent-api-openapi.yml
   - type: JSONSchema
     url: json-schema/curiosity-post-v1-messages-request-schema.json
   - type: JSONSchema
@@ -122,7 +122,424 @@ apis:
     url: json-schema/curiosity-put-api-search-settings-llm-request-schema.json
   - type: JSONSchema
     url: json-schema/curiosity-post-api-login-password-passwordid-request-schema.json
-
+- aid: curiosity:curiosity-build-api
+  name: Curiosity Build API
+  description: The Build API from Curiosity — 1 operation(s) for build.
+  humanURL: https://docs.curiosity.ai/workspace-api/
+  baseURL: https://<your-workspace-host>/api
+  tags:
+  - Build
+  properties:
+  - type: OpenAPI
+    url: openapi/curiosity-build-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/curiosity-post-v1-messages-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-post-chat-completions-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-put-api-search-synonyms-for-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-post-api-embeddings-embeddingid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-put-api-search-settings-llm-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-post-api-login-password-passwordid-request-schema.json
+- aid: curiosity:curiosity-cce-api
+  name: Curiosity Cce API
+  description: The Cce API from Curiosity — 1 operation(s) for cce.
+  humanURL: https://docs.curiosity.ai/workspace-api/
+  baseURL: https://<your-workspace-host>/api
+  tags:
+  - Cce
+  properties:
+  - type: OpenAPI
+    url: openapi/curiosity-cce-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/curiosity-post-v1-messages-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-post-chat-completions-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-put-api-search-synonyms-for-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-post-api-embeddings-embeddingid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-put-api-search-settings-llm-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-post-api-login-password-passwordid-request-schema.json
+- aid: curiosity:curiosity-chatai-api
+  name: Curiosity Chatai API
+  description: The Chatai API from Curiosity — 4 operation(s) for chatai.
+  humanURL: https://docs.curiosity.ai/workspace-api/
+  baseURL: https://<your-workspace-host>/api
+  tags:
+  - Chatai
+  properties:
+  - type: OpenAPI
+    url: openapi/curiosity-chatai-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/curiosity-post-v1-messages-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-post-chat-completions-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-put-api-search-synonyms-for-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-post-api-embeddings-embeddingid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-put-api-search-settings-llm-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-post-api-login-password-passwordid-request-schema.json
+- aid: curiosity:curiosity-code-api
+  name: Curiosity Code API
+  description: The Code API from Curiosity — 1 operation(s) for code.
+  humanURL: https://docs.curiosity.ai/workspace-api/
+  baseURL: https://<your-workspace-host>/api
+  tags:
+  - Code
+  properties:
+  - type: OpenAPI
+    url: openapi/curiosity-code-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/curiosity-post-v1-messages-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-post-chat-completions-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-put-api-search-synonyms-for-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-post-api-embeddings-embeddingid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-put-api-search-settings-llm-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-post-api-login-password-passwordid-request-schema.json
+- aid: curiosity:curiosity-config-api
+  name: Curiosity Config API
+  description: The Config API from Curiosity — 1 operation(s) for config.
+  humanURL: https://docs.curiosity.ai/workspace-api/
+  baseURL: https://<your-workspace-host>/api
+  tags:
+  - Config
+  properties:
+  - type: OpenAPI
+    url: openapi/curiosity-config-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/curiosity-post-v1-messages-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-post-chat-completions-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-put-api-search-synonyms-for-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-post-api-embeddings-embeddingid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-put-api-search-settings-llm-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-post-api-login-password-passwordid-request-schema.json
+- aid: curiosity:curiosity-curiosity-api-api
+  name: Curiosity Curiosity API
+  description: The Curiosity API API from Curiosity — 1 operation(s) for curiosity api.
+  humanURL: https://docs.curiosity.ai/workspace-api/
+  baseURL: https://<your-workspace-host>/api
+  tags:
+  - Curiosity API
+  properties:
+  - type: OpenAPI
+    url: openapi/curiosity-curiosity-api-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/curiosity-post-v1-messages-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-post-chat-completions-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-put-api-search-synonyms-for-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-post-api-embeddings-embeddingid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-put-api-search-settings-llm-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-post-api-login-password-passwordid-request-schema.json
+- aid: curiosity:curiosity-embeddings-api
+  name: Curiosity Embeddings API
+  description: The Embeddings API from Curiosity — 1 operation(s) for embeddings.
+  humanURL: https://docs.curiosity.ai/workspace-api/
+  baseURL: https://<your-workspace-host>/api
+  tags:
+  - Embeddings
+  properties:
+  - type: OpenAPI
+    url: openapi/curiosity-embeddings-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/curiosity-post-v1-messages-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-post-chat-completions-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-put-api-search-synonyms-for-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-post-api-embeddings-embeddingid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-put-api-search-settings-llm-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-post-api-login-password-passwordid-request-schema.json
+- aid: curiosity:curiosity-endpoints-api
+  name: Curiosity Endpoints API
+  description: The Endpoints API from Curiosity — 4 operation(s) for endpoints.
+  humanURL: https://docs.curiosity.ai/workspace-api/
+  baseURL: https://<your-workspace-host>/api
+  tags:
+  - Endpoints
+  properties:
+  - type: OpenAPI
+    url: openapi/curiosity-endpoints-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/curiosity-post-v1-messages-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-post-chat-completions-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-put-api-search-synonyms-for-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-post-api-embeddings-embeddingid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-put-api-search-settings-llm-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-post-api-login-password-passwordid-request-schema.json
+- aid: curiosity:curiosity-graph-api
+  name: Curiosity Graph API
+  description: The Graph API from Curiosity — 3 operation(s) for graph.
+  humanURL: https://docs.curiosity.ai/workspace-api/
+  baseURL: https://<your-workspace-host>/api
+  tags:
+  - Graph
+  properties:
+  - type: OpenAPI
+    url: openapi/curiosity-graph-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/curiosity-post-v1-messages-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-post-chat-completions-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-put-api-search-synonyms-for-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-post-api-embeddings-embeddingid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-put-api-search-settings-llm-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-post-api-login-password-passwordid-request-schema.json
+- aid: curiosity:curiosity-groups-api
+  name: Curiosity Groups API
+  description: The Groups API from Curiosity — 4 operation(s) for groups.
+  humanURL: https://docs.curiosity.ai/workspace-api/
+  baseURL: https://<your-workspace-host>/api
+  tags:
+  - Groups
+  properties:
+  - type: OpenAPI
+    url: openapi/curiosity-groups-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/curiosity-post-v1-messages-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-post-chat-completions-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-put-api-search-synonyms-for-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-post-api-embeddings-embeddingid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-put-api-search-settings-llm-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-post-api-login-password-passwordid-request-schema.json
+- aid: curiosity:curiosity-install-api
+  name: Curiosity Install API
+  description: The Install API from Curiosity — 1 operation(s) for install.
+  humanURL: https://docs.curiosity.ai/workspace-api/
+  baseURL: https://<your-workspace-host>/api
+  tags:
+  - Install
+  properties:
+  - type: OpenAPI
+    url: openapi/curiosity-install-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/curiosity-post-v1-messages-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-post-chat-completions-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-put-api-search-synonyms-for-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-post-api-embeddings-embeddingid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-put-api-search-settings-llm-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-post-api-login-password-passwordid-request-schema.json
+- aid: curiosity:curiosity-login-api
+  name: Curiosity Login API
+  description: The Login API from Curiosity — 3 operation(s) for login.
+  humanURL: https://docs.curiosity.ai/workspace-api/
+  baseURL: https://<your-workspace-host>/api
+  tags:
+  - Login
+  properties:
+  - type: OpenAPI
+    url: openapi/curiosity-login-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/curiosity-post-v1-messages-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-post-chat-completions-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-put-api-search-synonyms-for-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-post-api-embeddings-embeddingid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-put-api-search-settings-llm-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-post-api-login-password-passwordid-request-schema.json
+- aid: curiosity:curiosity-messages-api
+  name: Curiosity Messages API
+  description: The Messages API from Curiosity — 2 operation(s) for messages.
+  humanURL: https://docs.curiosity.ai/workspace-api/
+  baseURL: https://<your-workspace-host>/api
+  tags:
+  - Messages
+  properties:
+  - type: OpenAPI
+    url: openapi/curiosity-messages-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/curiosity-post-v1-messages-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-post-chat-completions-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-put-api-search-synonyms-for-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-post-api-embeddings-embeddingid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-put-api-search-settings-llm-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-post-api-login-password-passwordid-request-schema.json
+- aid: curiosity:curiosity-migrations-api
+  name: Curiosity Migrations API
+  description: The Migrations API from Curiosity — 1 operation(s) for migrations.
+  humanURL: https://docs.curiosity.ai/workspace-api/
+  baseURL: https://<your-workspace-host>/api
+  tags:
+  - Migrations
+  properties:
+  - type: OpenAPI
+    url: openapi/curiosity-migrations-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/curiosity-post-v1-messages-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-post-chat-completions-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-put-api-search-synonyms-for-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-post-api-embeddings-embeddingid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-put-api-search-settings-llm-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-post-api-login-password-passwordid-request-schema.json
+- aid: curiosity:curiosity-models-api
+  name: Curiosity Models API
+  description: The Models API from Curiosity — 3 operation(s) for models.
+  humanURL: https://docs.curiosity.ai/workspace-api/
+  baseURL: https://<your-workspace-host>/api
+  tags:
+  - Models
+  properties:
+  - type: OpenAPI
+    url: openapi/curiosity-models-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/curiosity-post-v1-messages-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-post-chat-completions-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-put-api-search-synonyms-for-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-post-api-embeddings-embeddingid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-put-api-search-settings-llm-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-post-api-login-password-passwordid-request-schema.json
+- aid: curiosity:curiosity-node-api
+  name: Curiosity Node API
+  description: The Node API from Curiosity — 5 operation(s) for node.
+  humanURL: https://docs.curiosity.ai/workspace-api/
+  baseURL: https://<your-workspace-host>/api
+  tags:
+  - Node
+  properties:
+  - type: OpenAPI
+    url: openapi/curiosity-node-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/curiosity-post-v1-messages-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-post-chat-completions-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-put-api-search-synonyms-for-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-post-api-embeddings-embeddingid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-put-api-search-settings-llm-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-post-api-login-password-passwordid-request-schema.json
+- aid: curiosity:curiosity-saml-api
+  name: Curiosity SAML API
+  description: The Saml API from Curiosity — 2 operation(s) for saml.
+  humanURL: https://docs.curiosity.ai/workspace-api/
+  baseURL: https://<your-workspace-host>/api
+  tags:
+  - Saml
+  properties:
+  - type: OpenAPI
+    url: openapi/curiosity-saml-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/curiosity-post-v1-messages-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-post-chat-completions-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-put-api-search-synonyms-for-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-post-api-embeddings-embeddingid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-put-api-search-settings-llm-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-post-api-login-password-passwordid-request-schema.json
+- aid: curiosity:curiosity-search-api
+  name: Curiosity Search API
+  description: The Search API from Curiosity — 3 operation(s) for search.
+  humanURL: https://docs.curiosity.ai/workspace-api/
+  baseURL: https://<your-workspace-host>/api
+  tags:
+  - Search
+  properties:
+  - type: OpenAPI
+    url: openapi/curiosity-search-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/curiosity-post-v1-messages-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-post-chat-completions-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-put-api-search-synonyms-for-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-post-api-embeddings-embeddingid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-put-api-search-settings-llm-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-post-api-login-password-passwordid-request-schema.json
+- aid: curiosity:curiosity-chat-completions-api
+  name: Curiosity Chat Completions API
+  description: The Chat Completions API from Curiosity — 1 operation(s) for chat completions.
+  humanURL: https://docs.curiosity.ai/workspace-api/
+  baseURL: https://<your-workspace-host>/api
+  tags:
+  - Chat Completions
+  properties:
+  - type: OpenAPI
+    url: openapi/curiosity-chat-completions-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/curiosity-post-v1-messages-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-post-chat-completions-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-put-api-search-synonyms-for-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-post-api-embeddings-embeddingid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-put-api-search-settings-llm-request-schema.json
+  - type: JSONSchema
+    url: json-schema/curiosity-post-api-login-password-passwordid-request-schema.json
 x-coverage:
   state: unreadable
   reason: no-machine-readable-spec
