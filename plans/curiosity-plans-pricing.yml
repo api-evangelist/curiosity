@@ -24,3 +24,21 @@ plans:
   - name: Minimum users
     limit_text: 50 users
 docs: https://curiosity.ai/pricing/
+x-canonical:
+  generated: '2026-10-23'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models: []
+  units: []
+  plans:
+  - name: Developer
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
+  - name: Enterprise Studio
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []

@@ -25,6 +25,13 @@ created: '2026-10-12'
 modified: '2026-10-12'
 
 tags:
+- Artificial Intelligence
+- Knowledge Graph
+- Enterprise
+- Data Integration
+- On-Premises
+- Company
+tags_raw:
 - AI
 - Knowledge-Graph
 - Enterprise
@@ -128,6 +135,8 @@ apis:
   humanURL: https://docs.curiosity.ai/workspace-api/
   baseURL: https://<your-workspace-host>/api
   tags:
+  - Builds
+  tags_raw:
   - Build
   properties:
   - type: OpenAPI
@@ -172,6 +181,8 @@ apis:
   humanURL: https://docs.curiosity.ai/workspace-api/
   baseURL: https://<your-workspace-host>/api
   tags:
+  - Chat AI
+  tags_raw:
   - Chatai
   properties:
   - type: OpenAPI
@@ -281,7 +292,8 @@ apis:
   description: The Endpoints API from Curiosity — 4 operation(s) for endpoints.
   humanURL: https://docs.curiosity.ai/workspace-api/
   baseURL: https://<your-workspace-host>/api
-  tags:
+  tags: []
+  tags_raw:
   - Endpoints
   properties:
   - type: OpenAPI
@@ -326,6 +338,8 @@ apis:
   humanURL: https://docs.curiosity.ai/workspace-api/
   baseURL: https://<your-workspace-host>/api
   tags:
+  - Group
+  tags_raw:
   - Groups
   properties:
   - type: OpenAPI
@@ -392,6 +406,8 @@ apis:
   humanURL: https://docs.curiosity.ai/workspace-api/
   baseURL: https://<your-workspace-host>/api
   tags:
+  - Message
+  tags_raw:
   - Messages
   properties:
   - type: OpenAPI
@@ -480,6 +496,8 @@ apis:
   humanURL: https://docs.curiosity.ai/workspace-api/
   baseURL: https://<your-workspace-host>/api
   tags:
+  - SAML
+  tags_raw:
   - Saml
   properties:
   - type: OpenAPI
